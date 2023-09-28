@@ -1,0 +1,1 @@
+config:x86:x86_64:generic:win32:用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30152 版:--prefix=/usr/local/ffmpeg--enable-gpl --enable-nonfree --enable-shared --disable-ffprobe --toolchain=msvc
