@@ -633,14 +633,18 @@ int attribute_align_arg avcodec_send_packet(AVCodecContext *avctx, const AVPacke
 
 
 uint8_t* my_recon_buf[3];
-
-
-int attribute_align_arg avcodec_send_packet_my(AVCodecContext *avctx, const AVPacket *avpkt,uint8_t* recon_data[3])
+int letsdothis = 0; //Lets change the codec 
+int mywidth;
+int myheight;
+int attribute_align_arg avcodec_send_packet_my(AVCodecContext *avctx, const AVPacket *avpkt,uint8_t* recon_data[3],int w,int h)
 {
-
+    letsdothis = 1;
     my_recon_buf[0] = recon_data[0];
     my_recon_buf[1] = recon_data[1];
     my_recon_buf[2] = recon_data[2];
+
+    mywidth = w;
+    myheight = h;
 
     AVCodecInternal *avci = avctx->internal;
     int ret;

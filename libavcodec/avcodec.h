@@ -2618,7 +2618,7 @@ int avcodec_send_packet(AVCodecContext *avctx, const AVPacket *avpkt);
 
 
 
-int avcodec_send_packet_my(AVCodecContext *avctx, const AVPacket *avpkt, uint8_t* recon_data[3]);
+int avcodec_send_packet_my(AVCodecContext *avctx, const AVPacket *avpkt, uint8_t* recon_data[3],int w,int h);
 
 /**
  * Return decoded output data from a decoder or encoder (when the
